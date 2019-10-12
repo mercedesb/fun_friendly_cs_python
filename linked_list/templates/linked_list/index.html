@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section class="Screen Screen--yellow">
+  <div class="Screen-header">
+    <img
+      alt="Line drawing of a scavenger hunt map"
+      class="Screen-thumbnail"
+      src="{% static 'ScavengerHunt.png' %}"
+    />
+    <h2>Let's make a scavenger hunt! - Linked List example</h2>
+  </div>
+  {% if error_message %}
+  <div class="Alert">{{ error_message }}</div>
+  {% endif %}
+  <h3>Adding a new item</h3>
+  <form action="{% url 'linked_list:create' %}" method="post">
+    {% csrf_token %}
+    <label for="add">New clue</label>
+    <input type="text" name="add" id="add" />
+    <input type="submit" value="Add Clue" />
+  </form>
+  <h3>Removing an item</h3>
+  <form action="{% url 'linked_list:delete' %}" method="delete">
+    {% csrf_token %}
+    <input type="submit" value="Remove Clue" />
+  </form>
+  <h2>Our Scavenger Hunt</h2>
+  <div>{{ progress | safe }}</div>
+</section>
+{% endblock content %}

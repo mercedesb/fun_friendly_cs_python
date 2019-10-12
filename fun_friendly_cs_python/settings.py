@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'big_o_notation.apps.BigONotationConfig',
     'set_theory.apps.SetTheoryConfig',
     'recursion.apps.RecursionConfig',
+    'linked_list.apps.LinkedListConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
