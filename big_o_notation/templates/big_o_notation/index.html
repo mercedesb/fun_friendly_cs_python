@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section class="Screen Screen--purple Screen--active">
+  <div class="Screen-header">
+    <img
+      alt="Line drawing of a cupcake"
+      class="Screen-thumbnail"
+      src="{% static 'Cupcake.png' %}"
+    />
+    <h2>Let's make cupcakes! - Big O Notation example</h2>
+  </div>
+  <a
+    class="Button"
+    href="{% url 'big_o_notation:preheat_oven' batches=batches %}"
+  >
+    Preheat oven
+  </a>
+  <a
+    class="Button"
+    href="{% url 'big_o_notation:combine_butter_and_sugar' batches=batches %}"
+  >
+    Combine butter and sugar
+  </a>
+  <a class="Button" href="{% url 'big_o_notation:add_eggs' batches=batches %}">
+    Add eggs
+  </a>
+  <a
+    class="Button"
+    href="{% url 'big_o_notation:combine_flour_and_baking_powder' batches=batches %}"
+  >
+    Combine flour and baking powder
+  </a>
+  <a
+    class="Button"
+    href="{% url 'big_o_notation:combine_milk_flour_and_butter_mixture' batches=batches %}"
+  >
+    Slowly add milk and flour to butter mixture
+  </a>
+  <a class="Button" href="{% url 'big_o_notation:bake' batches=batches %}">
+    Bake
+  </a>
+  <a class="Button" href="{% url 'big_o_notation:frost' batches=batches %}">
+    Frost with Fibonacci number
+  </a>
+  <h2>Our baking progress</h2>
+  <div>{{ progress | safe }}</div>
+</section>
+{% endblock content %}
