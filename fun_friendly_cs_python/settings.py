@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'set_theory.apps.SetTheoryConfig',
     'recursion.apps.RecursionConfig',
     'linked_list.apps.LinkedListConfig',
+    'stack.apps.StackConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

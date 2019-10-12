@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section class="Screen Screen--yellow">
+  <div class="Screen-header">
+    <img
+      alt="Line drawing of a Cookie Monster PEZ dispenser"
+      class="Screen-thumbnail"
+      src="{% static 'PEZDispenser.png' %}"
+    />
+    <h2>Let's eat some candy! - Stack example</h2>
+  </div>
+  {% if error_message %}
+  <div class="Alert">{{ error_message }}</div>
+  {% endif %}
+  <h3>Pushing a new item</h3>
+  <form action="{% url 'stack:create' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Add a PEZ" />
+  </form>
+  <h3>Popping an item</h3>
+  <form action="{% url 'stack:delete' %}" method="delete">
+    {% csrf_token %}
+    <input type="submit" value="Eat a PEZ" />
+  </form>
+  <h2>Our PEZ Dispenser</h2>
+  <div>{{ progress | safe }}</div>
+</section>
+{% endblock content %}

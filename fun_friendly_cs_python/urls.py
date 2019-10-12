@@ -21,5 +21,6 @@ urlpatterns = [
     path('set_theory/', include('set_theory.urls')),
     path('recursion/', include('recursion.urls')),
     path('linked_list/', include('linked_list.urls')),
+    path('stack/', include('stack.urls')),
     path('admin/', admin.site.urls),
 ]
