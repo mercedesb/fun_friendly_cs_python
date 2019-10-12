@@ -19,5 +19,6 @@ from django.urls import include, path
 urlpatterns = [
     path('big_o_notation/', include('big_o_notation.urls')),
     path('set_theory/', include('set_theory.urls')),
+    path('recursion/', include('recursion.urls')),
     path('admin/', admin.site.urls),
 ]

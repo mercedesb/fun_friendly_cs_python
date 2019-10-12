@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section class="Screen Screen--purple">
+  <div class="Screen-header">
+    <img
+      alt="Line drawing of a Russain nesting doll"
+      class="Screen-thumbnail"
+      src="{% static 'RussianNestingDoll.png' %}"
+    />
+    <h2>Let's play with dolls! - Recursion example</h2>
+  </div>
+  <h3>Count how many nesting dolls we have</h3>
+  <a class="Button" href="{% url 'recursion:count' %}">Count</a>
+  <h2>Our Nesting Dolls</h2>
+  <div>{{ progress | safe }}</div>
+</section>
+{% endblock content %}
