@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block content %}
+<section class="Screen Screen--purple">
+  <h2>
+    Let's find those cute instagram accounts! - Set theory example
+  </h2>
+  <a href="{% url 'admin:set_theory_instagramaccount_changelist' %}">
+    Add some accounts to our list
+  </a>
+
+  <h3>Let's do some set math</h3>
+  <a class="Button" href="{% url 'set_theory:intersection' %}">
+    Find the intersection
+  </a>
+  <a class="Button" href="{% url 'set_theory:union' %}">
+    Find the union
+  </a>
+  <a class="Button" href="{% url 'set_theory:difference' %}">
+    Find the difference (dogs!)
+  </a>
+  <a class="Button" href="{% url 'set_theory:relative_complement' %}">
+    Find the relative complement (cats!)
+  </a>
+  <a class="Button" href="{% url 'set_theory:symmetric_difference' %}">
+    Find the symmetric difference
+  </a>
+
+  <h2>The Instagram accounts we love</h2>
+  <div>{{ progress | safe }}</div>
+</section>
+{% endblock content %}
