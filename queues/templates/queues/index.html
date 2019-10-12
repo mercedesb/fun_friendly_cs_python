@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section class="Screen Screen--yellow">
+  <div class="Screen-header">
+    <img
+      alt="Line drawing of a feather"
+      class="Screen-thumbnail"
+      src="{% static 'Feather.png' %}"
+    />
+    <h2>Let's sign up for Birds of a Feather! - Queue example</h2>
+  </div>
+  {% if error_message %}
+  <div class="Alert">{{ error_message }}</div>
+  {% endif %}
+  <h3>Enqueuing a new item</h3>
+  <form action="{% url 'queues:create' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Get in line" />
+  </form>
+  <h3>Dequeuing an item</h3>
+  <form action="{% url 'queues:delete' %}" method="delete">
+    {% csrf_token %}
+    <input type="submit" value="Sign up!" />
+  </form>
+  <h2>Our Birds of a Feather Line</h2>
+  <div>{{ progress | safe }}</div>
+</section>
+{% endblock content %}

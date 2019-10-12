@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'recursion.apps.RecursionConfig',
     'linked_list.apps.LinkedListConfig',
     'stack.apps.StackConfig',
+    'queues.apps.QueuesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

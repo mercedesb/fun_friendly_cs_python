@@ -22,5 +22,6 @@ urlpatterns = [
     path('recursion/', include('recursion.urls')),
     path('linked_list/', include('linked_list.urls')),
     path('stack/', include('stack.urls')),
+    path('queues/', include('queues.urls')),
     path('admin/', admin.site.urls),
 ]
