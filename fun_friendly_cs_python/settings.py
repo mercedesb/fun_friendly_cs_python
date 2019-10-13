@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'linked_list.apps.LinkedListConfig',
     'stack.apps.StackConfig',
     'queues.apps.QueuesConfig',
+    'tree.apps.TreeConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

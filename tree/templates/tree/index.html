@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section class="Screen Screen--yellow">
+  <div class="Screen-header">
+    <img
+      alt="A tree representation of Harry and Cedric's path through the Triwizard maze"
+      class="Screen-thumbnail"
+      src="{% static 'TriwizardTree.png' %}"
+    />
+    <h2>Let's win the triwizard cup! - Binary Tree example</h2>
+  </div>
+  <div class="TreeContainer">
+    <div>
+      <h3>Let's see the possible routes</h3>
+      <a class="Button" href="{% url 'tree:harry_worst_iterative' %}">
+        Harry's worst route - iteratively
+      </a>
+      <a class="Button" href="{% url 'tree:harry_worst_recursive' %}">
+        Harry's worst route - recursively
+      </a>
+      <a class="Button" href="{% url 'tree:harry_best_iterative' %}">
+        Harry's best route - iteratively
+      </a>
+      <a class="Button" href="{% url 'tree:harry_best_recursive' %}">
+        Harry's best route - recursively
+      </a>
+      <br />
+      <a class="Button" href="{% url 'tree:cedric_worst_iterative' %}">
+        Cedric's worst route - iteratively
+      </a>
+      <a class="Button" href="{% url 'tree:cedric_worst_recursive' %}">
+        Cedric's worst route - recursively
+      </a>
+      <a class="Button" href="{% url 'tree:cedric_best_iterative' %}">
+        Cedric's best route - iteratively
+      </a>
+      <a class="Button" href="{% url 'tree:cedric_best_recursive' %}">
+        Cedric's best route - recursively
+      </a>
+      <br />
+      <div>{{ progress | safe }}</div>
+    </div>
+    <div>
+      <img
+        alt="A tree representation of Harry and Cedric's path through the Triwizard maze"
+        src="{% static 'TriwizardTree.png' %}"
+      />
+    </div>
+  </div>
+</section>
+{% endblock content %}

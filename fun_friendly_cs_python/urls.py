@@ -23,5 +23,6 @@ urlpatterns = [
     path('linked_list/', include('linked_list.urls')),
     path('stack/', include('stack.urls')),
     path('queues/', include('queues.urls')),
+    path('tree/', include('tree.urls')),
     path('admin/', admin.site.urls),
 ]
