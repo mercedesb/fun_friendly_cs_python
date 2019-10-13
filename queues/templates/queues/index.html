@@ -24,4 +24,8 @@
   <h2>Our Birds of a Feather Line</h2>
   <div>{{ progress | safe }}</div>
 </section>
+<div class="ButtonContainer">
+  <a class="Button PrevButton" href="{% url 'stack:index' %}">Prev</a>
+  <a class="Button NextButton" href="{% url 'tree:index' %}">Next</a>
+</div>
 {% endblock content %}

@@ -44,4 +44,8 @@
   <h2>Our baking progress</h2>
   <div>{{ progress | safe }}</div>
 </section>
+<div class="ButtonContainer">
+  <a class="Button PrevButton" disabled="disabled" href="">Prev</a>
+  <a class="Button NextButton" href="{% url 'set_theory:index' %}">Next</a>
+</div>
 {% endblock content %}

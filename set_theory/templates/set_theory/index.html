@@ -27,4 +27,8 @@
   <h2>The Instagram accounts we love</h2>
   <div>{{ progress | safe }}</div>
 </section>
+<div class="ButtonContainer">
+  <a class="Button PrevButton" href="{% url 'big_o_notation:index' %}">Prev</a>
+  <a class="Button NextButton" href="{% url 'recursion:index' %}">Next</a>
+</div>
 {% endblock content %}

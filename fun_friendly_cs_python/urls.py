@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from big_o_notation import views
 
 urlpatterns = [
+    path('', views.index, name='index'),
     path('big_o_notation/', include('big_o_notation.urls')),
     path('set_theory/', include('set_theory.urls')),
     path('recursion/', include('recursion.urls')),

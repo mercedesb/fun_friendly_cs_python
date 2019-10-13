@@ -26,4 +26,8 @@
   <h2>Our Scavenger Hunt</h2>
   <div>{{ progress | safe }}</div>
 </section>
+<div class="ButtonContainer">
+  <a class="Button PrevButton" href="{% url 'recursion:index' %}">Prev</a>
+  <a class="Button NextButton" href="{% url 'stack:index' %}">Next</a>
+</div>
 {% endblock content %}

@@ -13,4 +13,8 @@
   <h2>Our Nesting Dolls</h2>
   <div>{{ progress | safe }}</div>
 </section>
+<div class="ButtonContainer">
+  <a class="Button PrevButton" href="{% url 'set_theory:index' %}">Prev</a>
+  <a class="Button NextButton" href="{% url 'linked_list:index' %}">Next</a>
+</div>
 {% endblock content %}
